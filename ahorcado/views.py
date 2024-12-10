@@ -96,18 +96,18 @@ def jugar(request):  # Este es una funcion de vista en Django
             return redirect(ganar)
 
     # Determinar la imagen del ahorcado segun los intentos restantes
-    imagen_ahorcado = f"images/intentos/{8 -
-                                         request.session.get('intentos', 0)}.png"
+    imagen_ahorcado = f"images/intentos/{8 - request.session.get('intentos', 0)}.png"
 
     return render(request, 'jugar.html', {
         'intentos': request.session.get('intentos'),
         'score': request.session.get('score'),
         'totalpuntos': request.session.get('totalpuntos'),
-        'palabra': request.session.get('palabra'),
+        #'palabra': request.session.get('palabra'),
         'letras_adivinadas': request.session.get('letras_adivinadas'),
         'palabra_mostrada': request.session.get('palabra_mostrada'),
         'nickname': request.session.get('nickname'),
         'imagen_ahorcado': imagen_ahorcado,
+        'categoria_nombre': request.session.get('categoria_nombre'),
 
 
     })
@@ -203,7 +203,7 @@ def ganar(request):
     imagen_ahorcado = f"images/intentos/winner.png"
 
     return render(request, 'ganaste.html', {
-        'cagegoria': request.session.get('categoria'),
+        'categoria_nombre': request.session.get('categoria_nombre'),
         'nickname': nickname,
         'score': score,
         'totalpuntos': totalpuntos,
