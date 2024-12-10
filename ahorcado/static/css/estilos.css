@@ -1,0 +1,274 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+
+}
+
+.mensaje-animado {
+    font-size: 2rem;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: aparecer 2s ease-in-out, mover 2s infinite alternate;
+
+}
+
+/* Animacion de aparicion */
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.imagen {
+    flex: 0 0 200px;
+    text-align: center;
+
+}
+
+.imagen img {
+    max-width: 100%;
+    height: 450px;
+
+}
+
+.imagenganar {
+    flex: 0 0 200px;
+    text-align: center;
+
+}
+
+.imagenganar img {
+    max-width: 100%;
+    height: 450px;
+    position: absolute;
+    display: inline-block;
+    top: 150px;
+}
+
+@media (max-width: 768px) {
+    .imagen {
+        width: 100px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.imagenperder {
+    flex: 0 0 200px;
+    text-align: center;
+
+}
+
+.imagenperder img {
+    max-width: 100%;
+    height: 250px;
+    position: absolute;
+    display: inline-block;
+    top: 325px;
+}
+
+nav {
+    background: #333;
+    overflow: hidden;
+    transition: background-color 0.5s;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background: #575757;
+}
+
+.parrafo {
+    font-family: 'Arial', sans-serif;
+    /* Tipografía */
+    font-size: 18px;
+    /* Tamaño de fuente */
+    color: #333;
+    /* Color del texto */
+    line-height: 1.6;
+    /* Altura de línea para mejorar la legibilidad */
+    text-align: justify;
+    /* Justificar el texto */
+    background-color: rgb(255, 255, 255, 0.8);
+    /* Fondo del párrafo */
+    padding: 10px 15px;
+    /* Espaciado interno */
+    border: 1px solid #ddd;
+    /* Borde del párrafo */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    width: 350px;
+    height: 350px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.contenedor>div {
+    flex: 1;
+}
+
+.contenedor2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+    padding: 25px;
+    width: 140%;
+}
+
+.contenedor2>div {
+    flex: 1;
+}
+
+.contenedor3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+    padding: 20px;
+    width: 135%;
+}
+
+.contenedor3>div {
+    flex: 1;
+}
+
+
+
+
+.contenido {
+    padding: 20px;
+}
+
+.letrasganar {
+    display: inline-block;
+    /* Ajusta el tamaño al contenido */
+    background-color: rgba(255, 255, 255, 0.75);
+    /* Color de fondo con opacidad */
+    padding: 10px;
+    /* Espaciado interno alrededor del texto */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    /* Sombra para resaltar */
+    text-align: center;
+    /* Centrar texto dentro del div */
+    list-style-type: none;
+    width: 20%;
+    margin: auto;
+
+
+}
+
+.letrasperder {
+    display: inline-block;
+    /* Ajusta el tamaño al contenido */
+    background-color: rgba(255, 255, 255, 0.4);
+    /* Color de fondo con opacidad */
+    padding: 10px;
+    /* Espaciado interno alrededor del texto */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    /* Sombra para resaltar */
+    text-align: center;
+    /* Centrar texto dentro del div */
+    list-style-type: none;
+    width: 20%;
+    margin: auto;
+
+}
+
+.fondo-animado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/hBt.gif");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.fondogana {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/7DZz.gif");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.fondoperder {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/perder/QeMS.gif");
+    background-size: auto 36%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    z-index: -1;
+}
+
+footer {
+    text-align: center;
+    padding: 5px 0;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

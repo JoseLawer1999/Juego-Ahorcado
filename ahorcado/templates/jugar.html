@@ -1,0 +1,38 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block encabezado %}
+Ahorcado Games
+{% endblock %}
+
+{% block cuerpo %}
+<div class="contenedor">
+    <div>
+        <h1>Ahorcado Games</h1>
+        <!--<div id="timer" style="color: rgb(255, 102, 102);">00:00</div>-->
+        <p>Palabra a adivinar: {{palabra_mostrada}}</p>
+        <p>Score: {{score}}</p>
+        <p>Total puntaje: {{totalpuntos}}</p>
+        <p>Palabra oculta Prueba: {{palabra}}</p>
+        <p>Intentos: {{intentos}}</p>
+        <p>Letras_Usadas: {{letras_adivinadas}}</p>
+        <p>Nombre: {{nickname}}</p>
+        <!-- <p>Tiempo restante: {{tiempo_restante}} Segundos</p>-->
+
+
+
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="letra" placeholder="Escriba una letra" maxlength="1" required
+                style="padding: 5px;">
+            <button type="submit"
+                style="padding: 5px 10px; background-color: #4682B4; color: white; border: none; cursor: pointer;">Adivinar
+                Letra</button>
+        </form>
+    </div>
+    <div class="imagen">
+        <img src="{% static imagen_ahorcado %}" alt="Ahorcado">
+    </div>
+</div>
+
+{% endblock %}

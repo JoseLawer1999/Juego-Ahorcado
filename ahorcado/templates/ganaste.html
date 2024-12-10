@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <script src="{% static 'js/animaciones.js' %}"></script>
+    <title>Ahorcado Games</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="fondogana"></div>
+    </main>
+
+    <div class="letrasganar">
+        <h1>Ganaste</h1>
+    </div>
+
+
+    <div id="mensaje-animado" class="mensaje-animado">
+        ¡Felicidades, Ganaste!
+    </div>
+
+    <div class="letrasganar">
+
+        <h3>
+            <p>Categoria: {{categoria}}</p>
+            <p>Jugador: {{nickname}}</p>
+            <p>Puntaje: {{score}}</p>
+            <p>Puntaje Total: {{totalpuntos}}</p>
+            <h2>Quieres ir:</h2>
+            <h3>
+                <li><a href="{% url 'reiniciar' %}">Siguiente Nivel</a></li>
+                <li><a href="{% url 'iniciar_juego' %}">Regresar a Categoria</a></li>
+                <li><a href="{% url 'inicio' %}">Salir</a></li>
+            </h3>
+        </h3>
+    </div>
+
+    <div class="contenedor2">
+        <div class="imagenganar">
+            <img src="{% static imagen_ahorcado %}" alt="Ahorcado">
+        </div>
+    </div>
+
+
+
+    <footer>
+        <p>© 2024 Ahorcado Games. Todos los derechos reservados.</p>
+    </footer>
+
+
+</body>
+
+</html>

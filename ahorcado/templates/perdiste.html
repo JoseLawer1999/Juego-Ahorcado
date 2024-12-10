@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+        <title>Ahorcado Games</title>
+</head>
+
+<body>
+        <main>
+                <div class="fondoperder"></div>
+        </main>
+
+        <div class="letrasperder">
+                <h1>Perdiste</h1>
+        </div>
+
+        <div id="mensaje-animado" class="mensaje-animado">
+                !Perdiste LOL!
+        </div>
+
+        <div class="letrasperder">
+                <h3>
+                        <p>La palabra era: {{palabra}}</p>
+                        <p>Categoria: {{categoria_nombre}}</p>
+                        <p>Jugador: {{nickname}}</p>
+                        <p>Puntaje: {{score}}</p>
+                        <p>Puntaje Total: {{totalpuntos}}</p>
+                </h3>
+                <h2>Quieres ir:</h2>
+                <h3>
+                        <li><a href="{% url 'iniciar_juego' %}">Juego Nuevo</a></li>
+                        <li><a href="{% url 'inicio' %}">Salir</a></li>
+                </h3>
+
+        </div>
+
+        <div class="contenedor3">
+                <div class="imagenperder">
+                        <img src="{% static imagen_ahorcado %}" alt="Ahorcado">
+                </div>
+        </div>
+
+
+        <footer>
+                <p>© 2024 Ahorcado Games. Todos los derechos reservados.</p>
+        </footer>
+
+</body>
+
+</html>
